@@ -2,13 +2,40 @@
 <html>
   <head>
     <style type="text/css">
+      .test{background:red}
       .active{
         background-color:blue;
       }
     </style>
   </head>
     <body>
-      <div data-toggle="active" >Active</div>
+<article>
+
+           
+       <div data-toggle="active"  class="test">Active</div><br/>
+
+         
+         <article>
+          <div id="div-01">Here is div-01
+            <div id="div-02">Here is div-02
+              <div data-toggle="active" data-toggle_closest="article > div" class="test">Active toggle_closest</div>
+            </div>
+          </div>
+        </article>
+        <br>
+       <hr>        
+        <div class="test" data-toggle_attribute='class' data-toggle="active" data-toggle_closest="article > div"></div>
+       <br>
+       <hr> 
+        <div class="test" data-toggle_attribute='class' data-toggle="active, other" data-toggle_element="article > div"></div>
+       <br>
+       <hr>
+       TEST HERE
+        <div class="test" id="hey" data-test="" data-toggle_attribute='data-test' data-toggle="active, other, hi, jean" >----</div>
+        
+
+</article>
+         
       
     </body>
 
@@ -20,7 +47,8 @@
       }
     </script>
   
-      <script src="CoCreate-toogle-class.js"></script>
+      <script src="../../CoCreate-domEditor/src/domEditor.js"></script>
+      <script src="CoCreate-toogle.js"></script>
     
     
 </html>
