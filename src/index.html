@@ -3,6 +3,7 @@
   <head>
     <style type="text/css">
       .test{background:red}
+      .new{background:yellow}
       .active{
         background-color:blue;
       }
@@ -11,32 +12,39 @@
     <body>
 <article>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+
            
        <div data-toggle="active"  class="test">Active</div><br/>
 
          
          <article>
-          <div id="div-01">Here is div-01
-            <div id="div-02">Here is div-02
-              <div data-toggle="active" data-toggle_closest="article > div" class="test">Active toggle_closest</div>
+          <div id="div-01" class="vdom-item">Here is div-01 i should get class hidden
+            <div>
+              <div class="vdom-item" >some content1</div> 
+              <span data-toggle="test" data-toggle_closest=".vdom-item"><i class="fa fa-caret-down"></i></span>
             </div>
+             <div class="vdom-item" >some content2</div>
           </div>
+           <div class="vdom-item" >some content3</div>
+          <div id="div-03">Here is div-03</div>
         </article>
         <br>
        <hr>        
-        <div class="test" data-toggle_attribute='class' data-toggle="active" data-toggle_closest="article > div"></div>
+        <div class="vdom-item" data-toggle_attribute='class' data-toggle="active" data-toggle_closest="article > div">some content</div>
        <br>
        <hr> 
-        <div class="test" data-toggle_attribute='class' data-toggle="active, other" data-toggle_element="article > div"></div>
+        <div class="vdom-item" data-toggle_attribute='class' data-toggle="active, other" data-toggle_element="article > div #div-02">some content</div>
        <br>
        <hr>
        TEST HERE
-        <div class="test" id="hey" data-test="" data-toggle_attribute='data-test' data-toggle="active, other, hi, jean" >----</div>
+        <div class="vdom-item" id="hey" data-test="" data-toggle_attribute='data-test' data-toggle="active, other, hi, jean" >some content</div>
         
 
 </article>
          
-      
+        
     </body>
 
     <script>
